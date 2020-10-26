@@ -1,0 +1,57 @@
+
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="2000">
+      <img height="450px" src="assets/Main_Screen1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="2000">
+      <img height="450px" src="assets/Main_Screen2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="2000">
+      <img height="450px" src="assets/Main_Screen3.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="2000">
+      <img height="450px" src="assets/Main_Screen4.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-interval="2000">
+      <img height="450px" src="assets/Main_Screen5.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  <hr>
+
+  <h1 class="Heading">
+      Products Details
+  </h1>
+  <div class="row">
+        <div class="col-lg-4 text-center" *ngFor="let i of products">
+         
+          <a routerLink="/product-detail/{{i._id}}">
+              <h2 class="Farmsmart">{{i.product_name}}
+              </h2>
+
+              <img width="200px" height="200px" src="http://localhost:3010/{{i.productImagePath}}" alt="">
+              <p style="color:rgb(54, 32, 245); font-size: xx-large; font-family: 'Times New Roman', Times, serif; font-weight: bold;">
+                Description: <span style="color: rgb(18, 18, 19);"> {{i.product_description}} </span>  
+              </p>
+
+              <h1 style="color:rgb(54, 32, 245);">
+               Price : <span style="color: rgb(226, 19, 19);"> {{i.product_price}} rs. </span>
+              </h1>
+              <h1 style="color:rgb(54, 32, 245);">
+                Stock : <span style="color: rgb(226, 19, 19);">{{i.product_stock}} Qty.</span> 
+              </h1>
+            </a>
+            <hr>
+        </div>
+  </div>
+
+  
